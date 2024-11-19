@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap</title>
+    <style>
+        div {
+            width: 300px;
+            margin: auto;
+        }
+
+        fieldset {
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="1form.php" method="post">
+            <fieldset>
+                <legend> <b>Űrlap</b></legend>
+
+                <fieldset>
+                    <legend><b>Név:</b></legend>
+                    <label for="nev">Név:</label><br>
+                    <input type="text" name="nev" id="nev" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend><b>Napok</b></legend>
+                    <input type="radio" name="nap" value="1" id="hetfo" required>
+                    <label for="hetfo">Hétfő</label><br>
+                    <input type="radio" name="nap" value="2" id="kedd">
+                    <label for="kedd">Kedd</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend><b>Tananyagok</b></legend>
+                    <input type="checkbox" name="anyag[]" value="HTML" id="html">
+                    <label for="html">HTML</label><br>
+                    <input type="checkbox" name="anyag[]" value="PHP" id="php">
+                    <label for="php">PHP</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend><b>Csoport</b></legend>
+                    <label for="csoport">Válassz csoportot:</label>
+                    <select name="csoport" id="csoport" required>
+                        <option value="0">Válassz csoportot</option>
+                        <option value="1">Első</option>
+                        <option value="2">Második</option>
+                    </select>
+                </fieldset>
+
+                <br>
+                <input type="submit" value="Mehet">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
